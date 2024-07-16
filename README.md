@@ -12,13 +12,13 @@ O Mini-Oscilloscope é projetado para reagir a várias dimensões de som, inclui
 
 A interface do Mini-Oscilloscope é totalmente compatível com o Mixer Control Panel (MCP) do REAPER. Ele se integra perfeitamente, permitindo fácil acesso e visualização diretamente no painel de mixagem, sem a necessidade de janelas separadas.
 
-![UI Compatibility in MCP](path/to/ui_compatibility_mcp.gif)
+![UI Compatibility in MCP](images/MCP.gif)
 
 ## Customizações de Cores, Amplitude e Opacidade
 
 O Mini-Oscilloscope permite várias customizações para melhorar a experiência de visualização. Os usuários podem ajustar as cores do waveform e do grid, bem como a amplitude e a opacidade dos mesmos. Essas customizações ajudam a adaptar o visual do osciloscópio às preferências pessoais ou às necessidades específicas do projeto.
 
-![Color, Amplitude, and Opacity Customizations](path/to/color_amplitude_opacity.gif)
+![Color, Amplitude, and Opacity Customizations](images/colors-configs.gif)
 
 ---
 
