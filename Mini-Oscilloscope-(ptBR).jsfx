@@ -1,0 +1,88 @@
+desc: Mini-Oscilloscope (PTbr / por Mateus "Spacery" S.A.)
+// Mini Oscilloscope para REAPER
+// Com base no conceito de Corrscope
+
+// Configurações de forma de onda
+slider1:2<0,2,1{L,R,L+R}>Canal
+slider2:1<1,10,0.1>Escala de Tempo (ms/div)
+slider3:3600<100,5000,100>Escala de Amplitude (mV/div)
+
+// Cores da forma de onda
+slider4:1<0,1,0.01>Opacidade da Onda
+slider5:16777215<0,16777215,1>Cor da Onda
+
+// Cores da grade
+slider6:0.3<0,1,0.01>Opacidade do Grid
+slider7:16777215<0,16777215,1>Cor do Grid
+
+@init
+// Inicializar Variáveis
+buf_size = 1024; // Tamanho do buffer para o osciloscópio
+buf = 0;
+buf_index = 0;
+current_channel = 0;
+
+// Função para converter cores de int para RGB
+function int_to_rgb(int_color) (
+  temp_r = (int_color >> 16) & 255;
+  temp_g = (int_color >> 8) & 255;
+  temp_b = int_color & 255;
+  temp_r /= 255;
+  temp_g /= 255;
+  temp_b /= 255;
+);
+
+@slider
+// Atualizar parâmetros quando os sliders forem alterados
+time_scale = slider2;
+amp_scale = slider3;
+channel = slider1;
+waveform_opacity = slider4;
+waveform_color = slider5;
+grid_opacity = slider6;
+grid_color = slider7;
+
+// Converter cores de int para RGB
+int_to_rgb(waveform_color);
+waveform_r = temp_r;
+waveform_g = temp_g;
+waveform_b = temp_b;
+
+int_to_rgb(grid_color);
+grid_r = temp_r;
+grid_g = temp_g;
+grid_b = temp_b;
+
+@sample
+// Coletar amostras de audio no buffer
+sample = channel == 0 ? spl0 : channel == 1 ? spl1 : (spl0 + spl1) * 0.0001;
+
+buf[buf_index] = sample;
+buf_index = (buf_index + 1) % buf_size;
+
+@gfx 640 480
+// Desenhar a tela do osciloscópio
+gfx_clear = 0;
+
+// Definir a cor da grade e desenhar a grade
+gfx_set(grid_r, grid_g, grid_b, grid_opacity);
+divs = 10;
+i = 0;
+loop(divs + 1,
+    x = i * gfx_w / divs;
+    gfx_line(x, 0, x, gfx_h);
+    y = i * gfx_h / divs;
+    gfx_line(0, y, gfx_w, y);
+    i += 1;
+);
+
+// Definir a cor da forma de onda e desenhar a forma de onda
+gfx_set(waveform_r, waveform_g, waveform_b, waveform_opacity);
+step = gfx_w / buf_size;
+i = 0;
+loop(buf_size,
+    x = i * step;
+    y = (buf[i] * amp_scale / 2 + 0.5) * gfx_h;
+    gfx_line(x, gfx_h / 2, x, y);
+    i += 1;
+);

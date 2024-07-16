@@ -1,0 +1,88 @@
+desc: Mini-Oscilloscope (by Mateus "Spacery" S.A.)
+// Mini Oscilloscope for REAPER
+// Based on the concept of Corrscope
+
+// Waveform Configs
+slider1:2<0,2,1{L,R,L+R}>Channel
+slider2:1<1,10,0.1>Time Scale (ms/div)
+slider3:3600<100,5000,100>Amplitude Scale (mV/div)
+
+// Waveform Colors
+slider4:1<0,1,0.01>Waveform Opacity
+slider5:16777215<0,16777215,1>Waveform Color
+
+// Grid Colors
+slider6:0.3<0,1,0.01>Grid Opacity
+slider7:16777215<0,16777215,1>Grid Color
+
+@init
+// Initialize variables
+buf_size = 1024; // Buffer size for the oscilloscope
+buf = 0;
+buf_index = 0;
+current_channel = 0;
+
+// Function to convert int color to RGB
+function int_to_rgb(int_color) (
+  temp_r = (int_color >> 16) & 255;
+  temp_g = (int_color >> 8) & 255;
+  temp_b = int_color & 255;
+  temp_r /= 255;
+  temp_g /= 255;
+  temp_b /= 255;
+);
+
+@slider
+// Update parameters when sliders change
+time_scale = slider2;
+amp_scale = slider3;
+channel = slider1;
+waveform_opacity = slider4;
+waveform_color = slider5;
+grid_opacity = slider6;
+grid_color = slider7;
+
+// Convert colors from int to RGB
+int_to_rgb(waveform_color);
+waveform_r = temp_r;
+waveform_g = temp_g;
+waveform_b = temp_b;
+
+int_to_rgb(grid_color);
+grid_r = temp_r;
+grid_g = temp_g;
+grid_b = temp_b;
+
+@sample
+// Collect audio samples into buffer
+sample = channel == 0 ? spl0 : channel == 1 ? spl1 : (spl0 + spl1) * 0.0001;
+
+buf[buf_index] = sample;
+buf_index = (buf_index + 1) % buf_size;
+
+@gfx 640 480
+// Draw the oscilloscope display
+gfx_clear = 0;
+
+// Set grid color and draw grid
+gfx_set(grid_r, grid_g, grid_b, grid_opacity);
+divs = 10;
+i = 0;
+loop(divs + 1,
+    x = i * gfx_w / divs;
+    gfx_line(x, 0, x, gfx_h);
+    y = i * gfx_h / divs;
+    gfx_line(0, y, gfx_w, y);
+    i += 1;
+);
+
+// Set waveform color and draw waveform
+gfx_set(waveform_r, waveform_g, waveform_b, waveform_opacity);
+step = gfx_w / buf_size;
+i = 0;
+loop(buf_size,
+    x = i * step;
+    y = (buf[i] * amp_scale / 2 + 0.5) * gfx_h;
+    gfx_line(x, gfx_h / 2, x, y);
+    i += 1;
+);
