@@ -32,10 +32,6 @@ Permite várias customizações para melhorar a experiência de visualização. 
 
 Contribuições são bem-vindas.
 
-### Licença
-
-Licenciado sob a [Licença MIT](LICENSE).
-
 ---
 
 # Mini-Oscilloscope (English Version)
@@ -71,7 +67,3 @@ Allows various customizations to enhance the viewing experience. The colors of t
 ### Contribution
 
 Contributions are welcome.
-
-### License
-
-Licensed under the [MIT License](LICENSE).
