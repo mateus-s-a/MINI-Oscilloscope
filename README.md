@@ -36,7 +36,14 @@ Contribuições são bem-vindas.
 
 Licenciado sob a [Licença MIT](LICENSE).
 
-------
+
+
+
+
+
+
+
+
 # ENGLISH VERSION
 # Mini-Oscilloscope
 
