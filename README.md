@@ -6,7 +6,7 @@ Este script JSFX foi desenvolvido para a DAW REAPER e é baseado no repositório
 
 O Mini-Oscilloscope é projetado para reagir a várias dimensões de som, incluindo canais individuais (L e R) e uma combinação de ambos (L + R). Ele ajusta a visualização conforme o tipo de entrada de áudio para proporcionar uma representação precisa da forma de onda.
 
-![Different Dimensions of Sound](path/to/dimension_sound.gif)
+![Different Dimensions of Sound](images/waveshapes.gif)
 
 ## Compatibilidade UI em MCP
 
