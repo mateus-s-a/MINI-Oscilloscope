@@ -30,7 +30,7 @@ O Mini-Oscilloscope permite várias customizações para melhorar a experiência
 
 ### Contribuição
 
-Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar Pull Requests ou abrir Issues no repositório do GitHub.
+Contribuições são bem-vindas.
 
 ### Licença
 
