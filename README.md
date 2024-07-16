@@ -4,7 +4,7 @@ Este script JSFX foi desenvolvido para a DAW REAPER e é baseado no repositório
 
 ## Como Reage a Diferentes Tipos de Dimensões de Som
 
-O Mini-Oscilloscope é projetado para reagir a várias dimensões de som, incluindo canais individuais (L e R) e uma combinação de ambos (L + R). Ele ajusta a visualização conforme o tipo de entrada de áudio para proporcionar uma representação precisa da forma de onda.
+Projetado para reagir a várias dimensões de som, incluindo canais individuais (L e R: Esquerda e Direita) e uma combinação de ambos (L + R). Ele ajusta a visualização conforme o tipo de entrada de áudio para proporcionar uma representação precisa da forma de onda.
 
 ![Different Dimensions of Sound](images/waveshapes.gif)
 
@@ -16,7 +16,7 @@ A interface do Mini-Oscilloscope é totalmente compatível com o Mixer Control P
 
 ## Customizações de Cores, Amplitude e Opacidade
 
-O Mini-Oscilloscope permite várias customizações para melhorar a experiência de visualização. Os usuários podem ajustar as cores do waveform e do grid, bem como a amplitude e a opacidade dos mesmos. Essas customizações ajudam a adaptar o visual do osciloscópio às preferências pessoais ou às necessidades específicas do projeto.
+Permite várias customizações para melhorar a experiência de visualização. As cores do waveform e do grid podem ser ajustadas ao gosto, bem como a amplitude e a opacidade dos mesmos.
 
 ![Color, Amplitude, and Opacity Customizations](images/colors-configs.gif)
 
@@ -30,11 +30,11 @@ O Mini-Oscilloscope permite várias customizações para melhorar a experiência
 
 ### Contribuição
 
-Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar Pull Requests ou abrir Issues no repositório do GitHub.
+Contribuições são bem-vindas.
 
 ### Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Licenciado sob a [Licença MIT](LICENSE).
 
 ---
 
@@ -44,7 +44,7 @@ This JSFX script was developed for the REAPER DAW and is based on the [Corrscope
 
 ## How It Reacts to Different Types of Sound Dimensions
 
-The Mini-Oscilloscope is designed to react to various sound dimensions, including individual channels (L and R) and a combination of both (L + R). It adjusts the visualization according to the type of audio input to provide an accurate representation of the waveform.
+Designed to react to various sound dimensions, including individual channels (L and R) and a combination of both (L + R). It adjusts the visualization according to the type of audio input to provide an accurate representation of the waveform.
 
 ![Different Dimensions of Sound](images/waveshapes.gif)
 
@@ -56,7 +56,7 @@ The Mini-Oscilloscope interface is fully compatible with the REAPER Mixer Contro
 
 ## Customizations of Colors, Amplitude, and Opacity
 
-The Mini-Oscilloscope allows various customizations to enhance the viewing experience. Users can adjust the colors of the waveform and grid, as well as their amplitude and opacity. These customizations help tailor the oscilloscope's appearance to personal preferences or specific project needs.
+Allows various customizations to enhance the viewing experience. The colors of the waveform and grid can be adjusted to taste, as well as their amplitude and opacity.
 
 ![Color, Amplitude, and Opacity Customizations](images/colors-configs.gif)
 
@@ -70,8 +70,8 @@ The Mini-Oscilloscope allows various customizations to enhance the viewing exper
 
 ### Contribution
 
-Contributions are welcome! Please feel free to submit Pull Requests or open Issues on the GitHub repository.
+Contributions are welcome.
 
 ### License
 
-This project is licensed under the [MIT License](LICENSE).
+Licensed under the [MIT License](LICENSE).
