@@ -1,10 +1,10 @@
 # Mini-Oscilloscope
 
-Este script JSFX foi desenvolvido para a DAW REAPER e é baseado no repositório Corrscope. O Mini-Oscilloscope oferece uma visualização interativa do áudio com várias opções de customização.
+Este script JSFX foi desenvolvido para a DAW REAPER e é baseado no repositório Corrscope(github.com/corrscope/corrscope). O Mini-Oscilloscope oferece uma visualização interativa do áudio com várias opções de customização.
 
 ## Como Reage a Diferentes Tipos de Dimensões de Som
 
-O Mini-Oscilloscope é projetado para reagir a várias dimensões de som, incluindo canais individuais (L e R) e uma combinação de ambos (L + R). Ele ajusta a visualização conforme o tipo de entrada de áudio para proporcionar uma representação precisa da forma de onda.
+Projetado para reagir a várias dimensões de som, incluindo canais individuais (L e R) e uma combinação de ambos (L + R). Ele ajusta a visualização conforme o tipo de entrada de áudio para proporcionar uma representação precisa da forma de onda.
 
 ![Different Dimensions of Sound](images/waveshapes.gif)
 
@@ -16,7 +16,7 @@ A interface do Mini-Oscilloscope é totalmente compatível com o Mixer Control P
 
 ## Customizações de Cores, Amplitude e Opacidade
 
-O Mini-Oscilloscope permite várias customizações para melhorar a experiência de visualização. Os usuários podem ajustar as cores do waveform e do grid, bem como a amplitude e a opacidade dos mesmos. Essas customizações ajudam a adaptar o visual do osciloscópio às preferências pessoais ou às necessidades específicas do projeto.
+Customizações para melhorar a experiência de visualização. As cores do waveform e do grid, bem como a amplitude e a opacidade dos mesmos podem ser ajustados ao gosto.
 
 ![Color, Amplitude, and Opacity Customizations](images/colors-configs.gif)
 
@@ -34,4 +34,4 @@ Contribuições são bem-vindas.
 
 ### Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Licenciado sob a [Licença MIT](LICENSE).
