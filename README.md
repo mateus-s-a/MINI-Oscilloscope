@@ -1,6 +1,7 @@
 # Mini-Oscilloscope
 
 Este script JSFX foi desenvolvido para a DAW REAPER e é baseado no repositório [Corrscope](https://github.com/corrscope/corrscope). O Mini-Oscilloscope oferece uma visualização interativa do áudio com várias opções de customização.
+[This JSFX script was developed for the REAPER DAW and is based on the Corrscope repository. The Mini-Oscilloscope offers an interactive visualization of audio with various customization options.]
 
 ## Como Reage a Diferentes Tipos de Dimensões de Som
 
